@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<body>
+    
+
+        <script>
+            //join() troca separador
+            const nomes = ["Ana","Ariel","Albeto"];   
+              
+            alert("join() "+nomes.join(' | '))
+
+            //push() add item final
+            nomes.push('Durval');
+            alert("push() "+nomes.join(" | " ));
+
+            //pop() remove ult
+            nomes.pop();
+            alert("pop() "+nomes.join(" | "));
+
+            //shift() remove primeiro item e altera items nos indices
+            nomes.shift();
+            alert(" shift() "+nomes.join(" | "));
+
+            //unshift() add item no inicio indice 0
+            nomes.unshift("Antonieta");
+            alert("unshift() "+nomes.join(" | "));
+
+            //splice() Add items entro outros podendo ou não remover items
+            //splice(indice inicial, quant. remover, items a add);
+            nomes.splice(2,0,"Item", "Item2","Item3");
+            alert(" splice() "+nomes.join(" | "));
+
+            //concat() Juntar arrays
+            const nomes2 = ["Saito","Sayuki"];
+            const superLista= nomes2.concat(nomes);
+
+            alert(" concat() "+superLista.join(" | "));
+            
+            //slice() obter parte de um Array
+            // slice(indice inicio, indice de termino*não incluido*)
+            const nomes3= superLista.slice(3,5);
+            alert("slice() "+nomes3.join(" | "));
+
+           
+            
+
+        </script>
+        
+</body>
+</html>

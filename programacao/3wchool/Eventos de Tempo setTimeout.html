@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- /*  align-items: center; Centraliza os itens verticalmente */-->
+      <!-- justify-content: center;  /* Centraliza os itens horizontalmente */-->
+        <!-- /*  flex direction: column -> alinhamento em coluna*/-->
+         <!-- /*  gap: ; espacamento entre items*/-->
+    <div style="display:flex;flex-direction: column;align-items: center;gap: 20px;">
+           
+            <h1 id="demo">Contador de tempo</h1>
+            <br>
+            <h2 style="font-size: 200%;" id="tempo">0</h2>
+    </div> 
+    <div style="display:flex;justify-content:center;gap:20px;">    
+            <button class="start" onclick="start()" style="background-color: forestgreen;padding: 20px;">start contagem</button>   
+            <button class="stop" onclick="pause()" style="background-color: brown;padding: 20px;">stop contagem</button>   
+    </div>        
+            
+   
+
+    <script>
+        /*Execucao de codigos em intervalos de tempo
+        setTimeout(function,tempo em milisegundos) ->executa depois de esperar o tempo
+        setInterval(function, tempo milisegundos) -> repete a execucao continuamente  */
+        // clearTimeout limpa a contagem 
+
+        function start(){
+            document.getElementById("tempo").innerHTML="Contagem Iniciada."
+            setTimeout(function (){
+                document.getElementById("tempo").innerHTML="Contagem 3 seg. executada."
+            },3000)
+        }
+   
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+
+    <div id="testevento" style="width:75dvh;height:100vh;
+        margin:auto auto;background-color: rgba(196, 137, 251,0.8);transition: 2s;" 
+        onmouseover="mudaCor1()" onmouseout="mudaCor2()">
+     
+        <br>
+        <select id="escolha" onchange="escolha()" style="margin:auto auto;display: flex;">
+            <Option>Opcao 1</Option>
+            <Option>Opcao 2</Option>
+            <Option>Opcao 3</Option>
+            <Option>Opcao 4</Option>
+            <Option>Opcao 5</Option>
+        </select>
+        <br>
+    
+        <input onfocus="foco()" onblur="desfoque()" id="textoCampo" type="text" 
+        style="margin: auto auto;padding: 40px;display: flex;" >
+    </div>
+  
+
+    <script>
+
+        /*existem varios eventos
+        onclick -> click do mouse
+        ondblclick -> click duplo
+        onmouseover-> mouse sobre
+        onmouseout-> mouse fora
+        onmousemove-> movimento do mouse sobre área
+        onmousedown-> botão click pressionado (quando pressionado)  
+        onmouseup-> botão click solto (após pressionar)
+        onfocus->Quando elemento recebe foco
+        onchange-> quando carrega.(Melhor com options) 
+        onblur-> desfoque
+        onkeydown->
+        onkeypress->
+        onkeyup->   
+        onload->pagina carregada
+        onresize->redimencionamento
+        */
+
+        function mudaCor1(){
+            document.getElementById("testevento").style.backgroundColor="rgba(196, 137, 251,0.4)";
+        };
+        function mudaCor2(){
+            document.getElementById("testevento").style.backgroundColor="rgba(196, 137, 251,0.8)";
+        };
+        
+        function foco(){
+          const input = document.getElementById("textoCampo");
+          input.placeholder="Digite aqui...";
+        };
+
+        function desfoque(){
+          const input = document.getElementById("textoCampo");
+          input.placeholder="....";
+        };
+        function escolha(){
+          alert("Escolha efetuada");
+        };
+       
+
+
+    </script>
+    
+</body>
+</html>

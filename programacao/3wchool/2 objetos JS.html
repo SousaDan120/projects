@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        /*
+        Propriedades e métodos        
+        
+        */
+       const car={};
+
+       car.name="Fiat";
+
+       car.color="Silver";
+
+       window.alert("Model= " +car.name+ " Color=" + car.color );
+
+       const pessoa= new Object();
+
+       pessoa.name="Ana";
+
+       pessoa.age=79;
+
+       window.alert("Olá meu nome é "+pessoa.name+" :)");
+
+       const robo= new Object();
+
+       robo.nome="Abot";
+       robo.saudacao=function(){
+            return "Olá "+"meu nome é "+this.nome+" :J ";
+       }
+       alert(robo.saudacao());
+
+      /*  Excluir propriedades*/
+      delete car.color;
+      alert(car.color)
+
+
+
+
+    </script>
+</body>
+</html>

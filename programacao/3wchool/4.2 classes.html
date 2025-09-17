@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+   
+
+    <script>
+        //Classes são como fabricas de objetos 
+        //uso de construtor
+        //convencao letra maiusc no nome da classe
+        //**Classes sempre no topo**
+        class Carros{
+            constructor(nome,ano,cor){
+                this.nome=nome;
+                this.ano=ano;
+                this.cor=cor;
+
+            }
+            //metodos separados dos atributos
+            buzina(){
+                return this.nome+": BIIIII....";
+            }
+        }
+
+        //construir novo objeto
+
+        const uno= new Carros("UNO", 1999, "PRATA");
+        const gol= new Carros("GOL", 2001, "PRETO");
+
+
+        console.log(uno);
+        console.log(gol);
+        console.log(gol.buzina());
+
+        //mudanca de atributo
+        uno.ano=2003;
+        console.log(uno);
+
+
+      
+    </script>
+    
+</body>
+</html>

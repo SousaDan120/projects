@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--    this.value captura valor da option selecionada-->
+    <select onchange=mudaCor(this.value)>
+        <option value="white">white Theme</option>
+        <option value="black">black Theme</option>
+    </select>
+    
+    <script>
+
+        function mudaCor(cor){
+            if (cor == "white"){
+                document.body.style.backgroundColor="white";
+               
+            } else if (cor== "black"){
+                document.body.style.backgroundColor="black";
+                
+            }
+        }
+    
+
+
+    </script>
+    
+</body>
+</html>

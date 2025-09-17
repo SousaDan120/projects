@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<body>
+
+    
+    <script >
+        //Obter data atual, comando base.
+        let data=new Date();
+        console.log(data);
+
+        //Obter somente ano 
+        let ano=data.getFullYear();
+        console.log("Ano: "+ano);
+
+        //Obter Mes ***mes 0 Jan/ mes 11 Dez***
+        let mes=data.getMonth();
+        console.log("Indice do mes: "+mes);
+
+        //mes escrito
+        const mesesAno=["Janeiro","Fevereiro","Marco","Abril","Maio","Junho",
+            "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"
+        ];
+        console.log("Mes: "+mesesAno[data.getMonth()]);
+
+        //Obter dia
+        let dia=data.getDate();
+        console.log("Dia: "+dia);
+
+        //Obter dia **Semana* 0 - 6
+        let diaSemana=data.getDay();
+        const dias=["Dom","Seg","Ter","Quar","Qui","Sex","Sab"]
+        console.log("Dia semana: "+dias[diaSemana]);
+
+        //Pegar hora 0 - 23H
+        let hora=data.getHours();
+        console.log("Hora: "+hora);
+
+        //Pegar minutos 0 - 59 
+        let min=data.getMinutes();
+        console.log("Minutos: "+min);
+
+        //Pegar segundos 0 - 59 
+        let segundos=data.getSeconds();
+        console.log("Segundos: "+segundos);
+
+        //Pegar milisegundos 0 - 999
+        let milisegundos=data.getMilliseconds();
+        console.log("Milisegundos: "+milisegundos);
+
+
+        // Data padrão pt-BR
+        let dataBr=data.toLocaleString("pt-BR");
+        console.log("Data BR: "+dataBr)
+
+        //Data curta
+        let dataBrShort=data.toLocaleString('pt-BR',{dateStyle:'short'});
+        console.log("Data BR: "+dataBrShort);
+
+        //Hora curta
+        let horaBrShort=data.toLocaleString('pt-BR',{timeStyle:'short'});
+        console.log("Hora BR: "+horaBrShort);
+
+        //Comparar Datas
+        let hoje=new Date();
+        // ****Data de vencimento especificada no padrão JS indices***
+        let vencimento= new Date(2026,0,1);
+
+        if (hoje> vencimento){
+            console.log("Conta em aberto!!!")
+        }else {
+            console.log("Conta em dias!")
+        }
+
+        //Comparar datas em dias
+        let dataInicial=new Date();
+        let dataFinal=new Date(2026,0,31); //Data de vencimento***exemplo
+
+        let diferencaTempo=dataFinal.getTime() - dataInicial.getTime();
+        let diferencaDias=Math.ceil(diferencaTempo/(24*60*60*1000));
+
+        console.log(diferencaDias);
+
+
+    </script>
+
+
+    
+</body>
+</html>

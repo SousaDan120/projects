@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="demo"></h2>
+    <input id="nomeInp" type="text" placeholder="Digite nome..."><br>
+    <button onclick="addTexto()">Ativar modelo</button>
+    <div>
+        <h2 id="addItem"></h2>
+       
+
+    </div>
+
+
+    <script>
+        let texto=`Olá, seu nome??...`
+        
+        document.getElementById("demo").innerHTML=texto 
+        
+
+        
+        function addTexto(){
+            //Para obter value sempre add a funcao...
+
+            let nome=document.getElementById("nomeInp").value;
+            document.getElementById("demo").innerHTML=`Bem vindo(a)... ${nome}`;
+            document.getElementById("addItem").innerHTML+=`<br><p>${nome} </p>`;
+
+        }
+    
+
+        
+
+    </script>
+</body>
+</html>

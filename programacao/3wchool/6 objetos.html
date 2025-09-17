@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        const carro1={
+            /*propriedades e metodos*/
+            marca:"Fiat",
+            ano:1997,
+            buzina: function(){
+                return "BIIIIIIIIII....";
+            },
+            completo: function(){
+                return "Fabricante => "+this.marca+ ". Ano de Fab =>"+this.ano
+            }
+
+
+        }
+       
+
+
+
+
+        console.log(carro1.buzina())
+        console.log(carro1.completo())
+
+        /*Criando novo Objeto e atribuindo depois as propriedades e metodos*/
+        const carro2= new Object();
+
+        carro2.marca="BMW";
+        carro2.ano=2010;
+        carro2.partida=function(){
+                return 'VRUUUM';
+        }
+        console.log(carro2.marca);
+        console.log(carro2.partida());
+
+
+    </script>
+    
+</body>
+</html>

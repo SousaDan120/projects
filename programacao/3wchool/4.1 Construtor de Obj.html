@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+    
+
+        /*Construtor de Objetos  
+        sempre maiuscula*/
+
+        function Caminhao(modelo,cv,marca){
+            this.modeloCam=modelo;
+            this.cavalosPot=cv;
+            this.marcaCam=marca;
+
+        }
+
+        let caminhao1=new Caminhao("FH400", 400," Scania");
+      
+
+        let caminhao2= new Caminhao("Mercedes Benz", 400, "Mercedes");
+        
+
+        /*Antes de atribuir nova propriedade ao construtor*/
+        let descricao2=Object.values(caminhao2);
+        alert(descricao2);
+
+
+        Caminhao.prototype.cor=" ";
+
+        caminhao2.cor="azul";
+
+        /*Depois de atribuir nova propriedade ao construtor*/
+
+        descricao2=Object.values(caminhao2);
+        alert(descricao2);
+
+        /*Add metodo a objeto*/
+
+
+    </script>
+</body>
+</html>

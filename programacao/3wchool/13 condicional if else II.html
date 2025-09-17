@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inserir dados</h1>
+    <input style="padding: 50px;" type="text" placeholder="Digite aqui" id="nome">
+    <br><br>
+    
+    <button style="padding: 10px;" onclick="verificar()">Verificar</button>
+    <button style="padding: 10px;" onclick="limpa()">Limpar</button>
+    <h2 id="resultado"></h2>
+
+    <script>
+
+        function verificar(){
+            let nomeP=document.getElementById("nome").value;
+
+            //verificar e dar resposta
+            if (nomeP =="" || nomeP ==null){
+                let p=document.getElementById("resultado");//add a uma variavel
+                p.innerHTML="Campo não pode ser vazio";
+                p.style.color = "red";
+            } else {
+                let p=document.getElementById("resultado");//add a uma variavel
+                p.innerHTML="Dados registrados";
+                p.style.color = "green";
+            }
+        }
+
+        function limpa(){
+            let nomeP = document.getElementById("nome");
+            nomeP.value="";            
+
+        }
+
+      
+
+
+    </script>
+    
+</body>
+</html>

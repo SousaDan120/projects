@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="add" type="text" placeholder="Adicione...">
+    <button onclick="addTexto()">Ativar modelo</button>
+    <h2 id="demo">...</h2>   
+
+
+    <script>
+        let texto="Uso de template strings"
+        const carros=["FIAT","BMW","TOYOTA"];
+
+        function addTexto(){
+            let addInput=document.getElementById("add").value;
+            document.getElementById("add").value="";
+            
+
+            let titulo="Modelo de strings";
+            
+            carros.push(addInput);
+            let html=`<h1>${titulo}</h1><ul>`;
+
+
+                // x in carros = quanti items
+                //x of carros = items da matriz
+            for (const x of carros){
+                html+=`<li>${x}</li>`;
+
+            }
+            html+=`</ul>`;
+            document.getElementById("demo").innerHTML=html;
+            
+
+        }
+
+        </script>
+</body>
+</html>

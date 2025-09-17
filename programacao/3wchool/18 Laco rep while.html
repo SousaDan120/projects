@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+
+    <script>
+
+    let text='';
+    let i=0;
+       
+    //Loop while enquanto uma condição especificada for verdadeira.
+       while(i<11){
+        text+="-"+i;
+        i++;
+        console.log(text);
+       };
+
+    //Loop Do while executará o bloco de código uma vez, 
+        // antes de verificar se a condição é verdadeira.
+    let text2='';
+    let cont=10;
+
+    do{
+        text2+='-'+cont;
+        cont--;
+        console.log(text2);
+    } 
+    while(cont>0);
+
+    // Break e continue no while;
+    let text3='';
+    let x=0;
+
+    do{
+        text3+='-'+x;
+
+        x++;
+
+        if (x== 8){break};
+    }while(x<10);
+
+
+    </script>
+    
+</body>
+</html>

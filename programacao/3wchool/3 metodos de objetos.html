@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        /*
+        Metodos de objetos       
+        
+        */
+    
+        const carro={
+            modelo:"camaro",
+            cor:"amarelo",
+            ano:2000,
+           /* buzina: function(){
+                return "Biiiiii";
+            },
+            partida: function(){
+                return "Vruuummm";
+            }*/
+        };
+        alert(carro.modelo);
+        alert(carro.cor);
+        alert("Iniciando partida......");
+       
+        alert("Buzina....");
+      
+        
+        /*Exibindo propriedades de Objetos
+        com loop for*/
+        let escrever= " ";
+        for (let x in carro){
+            escrever+=carro[x]+" ";
+        };
+        alert(escrever);
+
+        /*
+        
+        com metodo Object.values()
+        */
+
+        let texto =Object.values(carro);
+        alert(texto);
+
+        /*Construtor de Objetos  
+        sempre maiuscula*/
+
+        function Carro(modelo,topspeed){
+            this.modeloCarro=modelo;
+            this.topspeedCarro=topspeed;
+        };
+        
+
+    </script>
+</body>
+</html>

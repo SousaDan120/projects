@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<body>
+    <h1>JSON BUSCA CEP</h1>
+    <input  id="cep" type="text" placeholder="Digite CEP para busca...">
+    <button onclick="buscarCep()">BUSCAR</button>
+    <p id="info">...</p>
+    <br>
+   
+    
+        <script>
+            function buscarCep(){
+                let entradaCep=document.getElementById('cep').value;
+
+                const ajax = new XMLHttpRequest();
+                ajax.open('GET', 'https://viacep.com.br/ws/'+entradaCep+'/json/');
+                ajax.send();
+
+                //Exibe todo texto obtido
+                ajax.onload = function (){
+                    document.getElementById('info').innerHTML=this.responseText;
+
+                    //converter em objeto e obter dados especificos
+                    let objeto=JSON.parse(this.responseText);
+                    let logradouro=objeto.logradouro;
+                    let cidade=objeto.localidade;
+                    let estado=objeto.uf;
+
+                    //exibir
+                    document.getElementById('info').innerHTML="Logradouro: "+logradouro+
+                    "<br> Cidade: "+ cidade+"<br> Estado: "+estado;
+
+
+
+
+
+                }
+
+            }
+
+            
+            
+
+
+                
+
+        </script>
+</body>
+</html>

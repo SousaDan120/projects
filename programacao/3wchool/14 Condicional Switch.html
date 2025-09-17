@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<body style="text-align: center;">
+    <h1>Digite cor desejada dentre opções</h1>
+    <br>
+    <h2>azul | verde | vermelho |</h2>
+    <br>
+    <input id="cor" style="padding: 50px;" type="text" placeholder="Digite aqui">
+    <button onclick="escolha()">Salvar</button>
+    
+
+    
+    <script>
+        function escolha(){
+            let cor = document.getElementById("cor").value;
+            cor=cor.toLowerCase()
+
+            switch (cor){
+            case "vermelho":
+                document.body.style.backgroundColor="red";
+                break;
+            case "azul":
+                document.body.style.backgroundColor="blue";
+                break;
+            case "verde":
+                document.body.style.backgroundColor="green";
+                break;
+            default: 
+                document.body.style.backgroundColor="white";
+        }
+
+
+        }
+
+        
+
+
+    </script>
+    
+</body>
+</html>

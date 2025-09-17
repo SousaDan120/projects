@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <select  name="" id="data" style="display: flex;margin: 100px auto auto auto;">
+                <!--Desabilita esta opcao-->
+        <option selected disabled>SELECIONE O ANO</option>
+    </select>
+
+    <h1>Carros</h1>
+    <h2 id="demo"></h2>
+
+    <script>
+        let data= new Date().getFullYear();
+           /*(ini;condi;incr) */
+        for(let cont = data;cont >=1900;cont--){
+            //Para incrementar corretamente na contagem use +=;
+            document.getElementById("data").innerHTML+="<option value='"+cont+"'>"+cont+"</option>";
+        }
+
+
+        /*Outro exemplo*/
+        const carros=["corola","civic","fusion","sonata"];
+        let num= carros.length;
+
+        for (let cont=0;cont<num;cont++){
+            document.getElementById("demo").innerHTML+= carros[cont]+" - ";
+        }
+    </script>
+    
+</body>
+</html>

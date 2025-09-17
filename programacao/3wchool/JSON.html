@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<body>
+    <h1>JSON</h1>
+    <h1 id="demo">Teste</h1>
+    <br>
+    <h1 id="demo2"></h1>
+    
+        <script>
+                //Converter Objetos em textos e textos em objetos
+
+                //JSON.parse() e JSON.stringify()
+                
+                //EXE: objeto
+
+                const celular={
+                    marca:"samsung",
+                    modelo:"s24",
+                    cor:"prata",
+                    armazenamento:[128,256,528,1000]
+                }
+
+                console.log(typeof(celular)+"  -  Celular");
+                
+                //Converter Obj em HTML
+                let texto=JSON.stringify(celular);
+                console.log(typeof(texto));
+                console.log(texto);
+                
+
+                document.getElementById("demo").innerHTML=texto;
+
+                //Converter string em Objeto
+                let objeto=JSON.parse(texto);
+                
+                console.log(typeof(objeto));
+                console.log(objeto);
+
+                console.log(objeto.cor+" - COR" )
+                 
+                //exemplo de uso prático consulta CEP
+                const ajax = new XMLHttpRequest();
+                ajax.open('GET','https://viacep.com.br/ws/78555000/json/');
+                ajax.send();
+
+                ajax.onload = function (){
+                    document.getElementById('demo2').innerHTML= this.responseText;
+                }
+
+ 
+
+        </script>
+</body>
+</html>

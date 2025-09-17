@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<body>
+
+    <script>/*Varios valores na mesma variavel,
+    
+    é possivel armazenar funções, objetos array "dentro" de array*/
+
+        const frutas=["banana", "limao","caju","uva"];
+        
+        alert(frutas+ " "+ "| total items: "+ frutas.length);
+
+        frutas[0]= "chocolate";
+
+        alert(frutas)
+
+        //Diferença matriz e objetos
+        const matriz = ["Jose", "Alves", 30]; //array
+        const objeto = { nome:"Jose", sobNome:"Alves", idade:30}; // object
+
+        //ultimo item array
+        alert(matriz[matriz.length - 1]);
+
+        //inserir item array
+        matriz.push("Masculino");
+        alert(matriz);
+      
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        /*Construtor*/
+        function Carro(marca,ano){
+            this.marca=marca;
+            this.ano=ano;
+            
+        }
+        
+        /*Novo Objeto atraves do construtor*/
+        const carro1= new Carro("Fiat", 1999);
+        const carro2= new Carro("BMW", 2014);
+            
+
+        console.log(carro1.marca);
+        console.log(carro2.marca);
+
+        /*Add novos metodos ao Construtor*/
+        Carro.prototype.Buzina= function(){ return '"BIIIIIIIIII"'};
+        Carro.prototype.Partida= function(){ return '"VRUUUUUUMM"'};
+
+        alert(carro1.marca+" "+carro1.Buzina());
+        alert(carro2.marca+" "+carro2.Partida());
+
+    </script>
+    
+</body>
+</html>

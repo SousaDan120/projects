@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<body>
+    
+
+        <script>
+            const superLista=["Joaquim","Rosa","Maria","Xarles"];
+             //sort() ordem alfabética
+            const nomesOrdem = superLista.sort();
+            alert("sort() "+nomesOrdem.join(" | "));
+
+            //reverse() ordem alfabética **decrescente**
+            nomesOrdem.reverse()
+            alert("reverse() "+nomesOrdem.join(" | "))
+
+            // Para numeros é preciso uma function()
+            const numeros = [10,434,86,7,3,56];
+            alert(numeros.join(" | "));
+
+            numeros.sort(function(a,b){return a-b});
+            alert(numeros.join(" | "));
+
+            //Maior e menor numeros Math metodo
+            //necessário **function padrão**
+
+            function maiorNum(array){
+                return Math.max.apply(null, array);
+
+            }
+
+                //exibir
+                alert(numeros.join(" | ")+"| Maior numero de array= "+maiorNum(numeros))
+            
+            //menor 
+            function menorNum(array){
+                return Math.min.apply(null, array);
+            }
+                //
+                alert(numeros.join(" | ")+"| Menor numero de array= "+menorNum(numeros))
+
+            //filter para numeros
+            const maior20 = numeros.filter(filtro);
+
+            function filtro(value,index,array){
+                return value > 20;
+            }
+                //
+                alert(numeros+". Maior 20 =      "+maior20.join(" | "));
+
+
+
+
+            
+
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- /*  align-items: center; Centraliza os itens verticalmente */-->
+      <!-- justify-content: center;  /* Centraliza os itens horizontalmente */-->
+        <!-- /*  flex direction: column -> alinhamento em coluna*/-->
+         <!-- /*  gap: ; espacamento entre items*/-->
+    <div style="display:flex;flex-direction: column;height: 50vh;width: 50vh 50vh;background-color: rgb(193, 225, 245);">
+        <div style="display:flex;flex-direction: column;align-items: center;gap: 20px;">
+            
+                <h1 id="demo">CRONOMETRO</h1>
+                <br>
+                <h2 style="font-size: 200%;" id="tempo">0</h2>
+        </div> 
+        <div style="display:flex;justify-content:center;gap:20px;">    
+                <button onclick="start()" style="background-color: rgb(84, 230, 84);padding: 20px;">Start contagem</button>   
+                <button onclick="pause()" style="background-color: rgb(240, 78, 78);padding: 20px;">Stop contagem</button> 
+                <button onclick="reset()" style="background-color: rgb(95, 53, 232);padding: 20px;">Reset</button>  
+        </div>        
+    </div>    
+   
+
+    <script>
+        /*Execucao de codigos em intervalos de tempo
+        setTimeout(function,tempo em milisegundos) ->executa depois de esperar o tempo
+        setInterval(function, tempo milisegundos) -> repete a execucao continuamente  */
+        // clearTimeout limpa a contagem 
+
+        
+        function start(){
+            //necessario ser varivel global
+            tempo= setInterval(function intervalo(){
+
+                //Obter o ID,Add a uma variavel,parseInt(converter em INT)
+                //
+                let numero=document.getElementById("tempo").innerHTML;
+                let soma=parseInt(numero)+1;
+                document.getElementById("tempo").innerHTML=soma;
+            },1000)
+        }
+
+        //necessario cria variavel para armzanar setInterval
+        //para conseguir parar..
+        function pause(){
+            //Para parar interval
+            clearInterval(tempo);
+        }
+
+        function reset(){
+            clearInterval(tempo);
+            document.getElementById("tempo").innerHTML=0;
+        }
+   
+    </script>
+    
+</body>
+</html>
